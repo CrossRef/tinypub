@@ -1,0 +1,17 @@
+# A sample Gemfile
+source "http://rubygems.org"
+
+# gem "rails"
+gem "bundler"
+gem "sinatra"
+gem "sinatra-contrib"
+gem "json"
+#gem "bson"
+#gem "bson_ext"
+gem "activesupport", :require => "active_support"
+#gem "actionpack"
+#gem "mongo"
+gem "rest-client", "~> 1.6.7"
+gem "dm-sqlite-adapter"
+gem "data_mapper"
+gem "prawn"

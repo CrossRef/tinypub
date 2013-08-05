@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>
+	<%= settings.journal_name %> Home Page
+</title>
+</head>
+<body>
+<h2><%= settings.journal_name %> Home Page</h2>
+<h3>Published by: <%= settings.publisher_name %></h3>
+
+<p><%= settings.description %></p>
+
+<table>
+	<thead>
+		<tr>
+			<th>Setting</th>
+			<th>Value</th>
+		</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>Open Access?</td><td><%= settings.open_access %></td>
+	</tr>
+	<tr>
+
+		<td>Check Prospect for Licenses?</td>
+		<td><%= settings.check_license_registry %></td>
+	</tr>
+	<tr>
+		<td>Enforce Rate Limits?</td>
+		<td><%= settings.rate_limit %></td>
+	</tr>
+	</tbody>
+		
+</table>
+
+<% unless settings.open_access  %>
+	<h3>NB: Subscription Publishers</h3>
+	<p>Remember that you must add your local IP address (<%= request.env['REMOTE_ADDR']%>)to the access_control before querying this site will work.</p>
+	<p>To do this, issue the following command in the source root:</p>
+	<code>tools/add_subscriber "<%= settings.journal_name %>" <%= request.env['REMOTE_ADDR']%></code>
+<% end %>
+
+<h3>Example Queries</h3>
+
+
+<% if settings.open_access || ! settings.check_license_registry %>
+	<p>Then the command for getting the full text PDF  would be:"</p>
+	<code>curl -k -D - -L -o example.pdf -H "Accept: application/pdf" "http://<%= settings.site_uri %>/fulltext/515151"</code>
+	<p>And the command for getting the full text XML  would be:"</p>
+	<code>curl -k -D - -L -o example.xml -H "Accept: text/xml" "https://<%= settings.site_uri %>/fulltext/515151"</code>
+
+<% else %>
+
+	Assuming the following:
+	<ul>
+		<li>The full text resource uri returned by content negotiation is "<code>http://<%= settings.site_uri %>/fulltext/515151</code>"</li>
+		<li>The Client API Token is: <code>Ekcboi7Yb-D0RXnN-sqEuw</code></li>
+	</ul>
+	<p>Then the command for getting the full text PDF  would be:"</p>
+	<code>curl -k -D - -L -o example.pdf -H "CR-Prospect-Client-Token: Ekcboi7Yb-D0RXnN-sqEuw" -H "Accept: application/pdf" "http://<%= settings.site_uri %>/fulltext/515151"</code>
+	<p>And the command for getting the full text XML  would be:"</p>
+	<code>curl -k -D - -L -o example.xml -H "CR-Prospect-Client-Token: Ekcboi7Yb-D0RXnN-sqEuw" -H "Accept: text/xml" "http://<%= settings.site_uri %>/fulltext/515151"</code>
+
+<% end %>
+
+
+

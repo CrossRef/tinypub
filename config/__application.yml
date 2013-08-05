@@ -1,0 +1,33 @@
+## What do you want your fake yournam to be called?
+journal_name: Annals Of Psychoceramics B
+publisher_name: CrossRef
+
+## What features do you want turnded on?
+## Comments/uncomment below as needed.
+#
+# OA publishers probably want:
+check_license_registry: false
+check_subscriptions: false
+
+# Subscription publishers who allow TDM in
+# exisitng institutional licenses probably want:
+check_license_registry: false
+check_subscriptions: true
+
+# Subscription publishers who have supplementary TDM
+# licenses registered with the Prospect License Registry
+# probably want:
+check_license_registry: false
+check_subscriptions: true
+accepted_licenses:
+license_trust_length: 5.minutes
+prospect_publisher_api_key: prospect.labs.crossref.org
+
+
+# Are you afriad that your site might fall over
+# if overburdened by TDM bots?
+enable_rate_limiting: true
+window_query_limit: 5
+window_length: 1.minute
+
+
