@@ -1,0 +1,39 @@
+<VirtualHost *:80>
+  ServerName           tinypub.example.com 
+  ServerAdmin						you@tinypub.example.com
+  AllowEncodedSlashes   On
+  UseCanonicalName      Off
+  RackEnv development
+  ErrorLog         /var/log/apache2/tinypub-error_log
+  TransferLog      /var/log/apache2/tinypub-access_log
+
+  DocumentRoot /home/webapps/tinypub/public
+
+  <Directory /home/webapps/tinypub/public>
+    Allow from all
+    Options -MultiViews
+  </Directory>
+
+  PassengerMinInstances 2
+</VirtualHost>
+
+<VirtualHost *:443>
+  SSLEngine on
+  SSLCertificateFile /etc/apache2/ssl/tinypub.pem
+  ServerName            tinypub.example.com
+  ServerAdmin					 you@tinypub.example.com
+  AllowEncodedSlashes   On
+  UseCanonicalName      Off
+  RackEnv development
+  ErrorLog         /var/log/apache2/tinypub-error_log
+  TransferLog      /var/log/apache2/tinypub-access_log
+
+  DocumentRoot /home/webapps/tinypub/public
+
+  <Directory /home/webapps/tinypub/public>
+    Allow from all
+    Options -MultiViews
+  </Directory>
+
+  PassengerMinInstances 2
+</VirtualHost>

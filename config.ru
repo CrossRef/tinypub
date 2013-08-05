@@ -1,3 +1,3 @@
-require './annals.rb'
+require './tinypub.rb'
 
 run Sinatra::Application

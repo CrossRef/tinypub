@@ -158,3 +158,27 @@ yay, a subscriber!
 getting prospector session information
 we have this prospector already in our local database
 skip check with Prospect service and rely on local data...
+***** Starting Annals Of Psychoceramics B Server at 2013-08-05 11:41:26 UTC UTC *******
+***** Starting Annals Of Psychoceramics B Server at 2013-08-05 11:41:28 UTC UTC *******
+***** Starting Tiny Open Access Journal Server at 2013-08-05 11:58:47 UTC UTC *******
+***** Starting Tiny Open Access Journal Server at 2013-08-05 11:58:49 UTC UTC *******
+***** Starting Tiny Open Access Journal Server at 2013-08-05 12:01:29 UTC UTC *******
+getting prospector session information
+we do not have this prospector in our local database, we need to check with Prospect License Registry
+get prospector profile from Prospect License Registry using publisher_token 
+***** Starting Annals Of Psychoceramics B Server at 2013-08-05 12:04:01 UTC UTC *******
+checking subscription for ip address:  92.139.84.189
+yay, a subscriber!
+getting prospector session information
+we have this prospector already in our local database
+but it is time to do a periodic check with the Prospect License Registry...
+get prospector profile from Prospect License Registry using publisher_token MdvA59fGn8ukykYlSxJL6g
+***** Starting Annals Of Psychoceramics B Server at 2013-08-05 12:04:11 UTC UTC *******
+checking subscription for ip address:  92.139.84.189
+yay, a subscriber!
+getting prospector session information
+we have this prospector already in our local database
+skip check with Prospect service and rely on local data...
+***** Starting Annals Of Psychoceramics B Server at 2013-08-05 12:28:24 UTC UTC *******
+***** Starting Annals Of Psychoceramics B Server at 2013-08-05 12:38:16 UTC UTC *******
+***** Starting Annals Of Psychoceramics B Server at 2013-08-05 12:38:18 UTC UTC *******

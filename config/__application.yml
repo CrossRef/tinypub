@@ -1,33 +1,23 @@
-## What do you want your fake yournam to be called?
-journal_name: Annals Of Psychoceramics B
-publisher_name: CrossRef
-
-## What features do you want turnded on?
-## Comments/uncomment below as needed.
-#
-# OA publishers probably want:
-check_license_registry: false
-check_subscriptions: false
-
-# Subscription publishers who allow TDM in
-# exisitng institutional licenses probably want:
-check_license_registry: false
-check_subscriptions: true
-
-# Subscription publishers who have supplementary TDM
-# licenses registered with the Prospect License Registry
-# probably want:
-check_license_registry: false
-check_subscriptions: true
-accepted_licenses:
-license_trust_length: 5.minutes
-prospect_publisher_api_key: prospect.labs.crossref.org
+## What do you want your fake journal to be called?
+journal_name: Tiny Subscription Journal
+publisher_name: Tiny Publisher with Separate TDM License
+site_uri: tinypub.example.com
+description: Subscription based publisher that requires separate TDM license via Prospect License Registry and who uses rate-limits 
 
 
-# Are you afriad that your site might fall over
+check_license_registry: true
+force_ssl: true
+open_access: false
+accepted_licenses: [ "http://www.crossref.org/tdm_license","http://www.crossref.org/tdm_license_v2" ]
+license_trust_length: 300
+prospect_publisher_api_token: MdvA59fGn8ukykYlSxJL6g
+
+
+# Are you worried your site might fall over
 # if overburdened by TDM bots?
-enable_rate_limiting: true
+# NB: The numbers below are absurdly low
+rate_limit: true
 window_query_limit: 5
-window_length: 1.minute
+window_length: 60 
 
 
