@@ -25,9 +25,7 @@ Copy the sample file config/__application.yml to config/application.yml and adju
 
 After which running the following should start the server.
 
-...
-bundle exec rackup
-...
+    bundle exec rackup
 
 #### Running under Apache/Passenger
 
