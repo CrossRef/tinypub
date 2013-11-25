@@ -194,7 +194,7 @@ end
 
 class RateLimitExceeded < AnnalsError
 	def initialize
-		@status = 401
+		@status = 429
 		super("Prospect Rate Limit Exceeded")
 	end
 end
