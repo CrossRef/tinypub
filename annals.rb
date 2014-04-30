@@ -48,12 +48,12 @@ get '/fulltext/:id', :provides => [:pdf]  do
 	
 	check_subscription unless settings.open_access
 
-	prospector = prospector_session
-	check_license prospector if settings.check_license_registry
+	researcher = researcher_session
+	check_license researcher if settings.check_license_registry
 
-	reply_headers =	{'CR-Propspect-Client-Token' => "#{request.env['HTTP_CR_PROSPECT_CLIENT_TOKEN']}"}
+	reply_headers =	{'CR-Clickthrough-Client-Token' => "#{request.env['HTTP_CR_CLICKTHROUGH_CLIENT_TOKEN']}"}
 	
-	reply_headers.merge! rate_limit prospector if settings.rate_limit
+	reply_headers.merge! rate_limit researcher if settings.rate_limit
 
 	generate_pdf params[:id]
 	
@@ -67,12 +67,12 @@ get '/fulltext/:id', :provides => [:xml]  do
 	
 	check_subscription unless settings.open_access
 
-	prospector = prospector_session
-	check_license prospector if settings.check_license_registry
+	researcher = researcher_session
+	check_license researcher if settings.check_license_registry
 
-	reply_headers =	{'CR-Propspect-Client-Token' => "#{request.env['HTTP_CR_PROSPECT_CLIENT_TOKEN']}"}
+	reply_headers =	{'CR-Clickthrough-Token' => "#{request.env['HTTP_CR_CLICKTHROUGH_CLIENT_TOKEN']}"}
 	
-	reply_headers.merge! rate_limit prospector if settings.rate_limit
+	reply_headers.merge! rate_limit researcher if settings.rate_limit
 
 	headers reply_headers
 	erb :xml

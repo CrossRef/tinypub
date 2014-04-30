@@ -23,7 +23,7 @@
 	</tr>
 	<tr>
 
-		<td>Check Prospect for Licenses?</td>
+		<td>Check Click-Through Service for Licenses?</td>
 		<td><%= settings.check_license_registry %></td>
 	</tr>
 	<tr>
@@ -58,9 +58,9 @@
 		<li>The Client API Token is: <code>Ekcboi7Yb-D0RXnN-sqEuw</code></li>
 	</ul>
 	<p>Then the command for getting the full text PDF  would be:"</p>
-	<code>curl -k -D - -L -o example.pdf -H "CR-Prospect-Client-Token: Ekcboi7Yb-D0RXnN-sqEuw" -H "Accept: application/pdf" "http://<%= settings.site_uri %>/fulltext/515151"</code>
+	<code>curl -k -D - -L -o example.pdf -H "CR-Clickthrough-Client-Token: Ekcboi7Yb-D0RXnN-sqEuw" -H "Accept: application/pdf" "http://<%= settings.site_uri %>/fulltext/515151"</code>
 	<p>And the command for getting the full text XML  would be:"</p>
-	<code>curl -k -D - -L -o example.xml -H "CR-Prospect-Client-Token: Ekcboi7Yb-D0RXnN-sqEuw" -H "Accept: text/xml" "http://<%= settings.site_uri %>/fulltext/515151"</code>
+	<code>curl -k -D - -L -o example.xml -H "CR-Clickthrough-Client-Token: Ekcboi7Yb-D0RXnN-sqEuw" -H "Accept: text/xml" "http://<%= settings.site_uri %>/fulltext/515151"</code>
 
 <% end %>
 

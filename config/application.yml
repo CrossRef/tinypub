@@ -2,7 +2,7 @@
 journal_name: Annals Of Psychoceramics B
 publisher_name: CrossRef
 site_uri: annalsofpsychoceramics.labs.crossref.org
-description: Subscription based publisher that requires separate TDM license via Prospect License Registry and who uses rate-limits 
+description: Subscription based publisher that requires separate TDM license via Click-Through Service and who uses rate-limits 
 
 ## What features do you want turned on?
 ## Comments/uncomment below as needed.
@@ -17,15 +17,15 @@ description: Subscription based publisher that requires separate TDM license via
 #open_access: false
 
 # Subscription publishers who have supplementary TDM
-# licenses registered with the Prospect License Registry
+# licenses registered with the Click-Through Service
 # probably want:
 
 check_license_registry: true
 force_ssl: false
-open_access: false
-accepted_licenses: [ "http://www.crossref.org/tdm_license","http://www.crossref.org/tdm_license_v2" ]
+open_access: true
+accepted_licenses: [ "http://www.crossref.org/tdm_license","http://www.crossref.org/tdm_license_v2", "https://creativecommons.org/licenses/by/2.0/" ]
 license_trust_length: 300
-prospect_publisher_api_token: MdvA59fGn8ukykYlSxJL6g
+clickthrough_publisher_api_token: f7b9f443-c1fed60b-9c1f619b-5fdae2f8
 
 
 # Are you worried your site might fall over

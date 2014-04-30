@@ -13,13 +13,13 @@ class Subscribers
 end
 
 
-class Prospectors
+class Researchers
 	include DataMapper::Resource
-	property :id,												Serial 
-	property :api_token,								String, :key => true
-	property :window_count,							Integer
-	property :window_reset_time,				DateTime
-	property :orcid,										URI
+	property :id, Serial 
+	property :api_token, String, :key => true
+	property :window_count, Integer
+	property :window_reset_time, DateTime
+	property :orcid, URI
 	property :license_check_reset_time, DateTime
 end
 

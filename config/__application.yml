@@ -2,7 +2,7 @@
 journal_name: Tiny Subscription Journal
 publisher_name: Tiny Publisher with Separate TDM License
 site_uri: tinypub.example.com
-description: Subscription based publisher that requires separate TDM license via Prospect License Registry and who uses rate-limits 
+description: Subscription based publisher that requires separate TDM license via Click-Through Service and who uses rate-limits 
 
 
 check_license_registry: true
@@ -10,7 +10,7 @@ force_ssl: true
 open_access: false
 accepted_licenses: [ "http://www.crossref.org/tdm_license","http://www.crossref.org/tdm_license_v2" ]
 license_trust_length: 300
-prospect_publisher_api_token: MdvA59fGn8ukykYlSxJL6g
+clickthrough_publisher_api_token: MdvA59fGn8ukykYlSxJL6g
 
 
 # Are you worried your site might fall over

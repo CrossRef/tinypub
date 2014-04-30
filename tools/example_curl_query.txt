@@ -1,1 +1,1 @@
-curl -k -H "CR-Prospect-Client-Token: dink" "https://annalsofpsychoceramics.labs.crossref.org/fulltext/515151" -D - -L -O
+curl -k -H "CR-Clickthrough-Client-Token: dink" "https://annalsofpsychoceramics.labs.crossref.org/fulltext/515151" -D - -L -O

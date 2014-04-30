@@ -1,7 +1,7 @@
-TinyPub, is a Ruby Sinatra  application written by CrossRef in order to demosnstrate how a publisher site should interact with the Prospect TDM API and Prospect License Registry. 
+TinyPub, is a Ruby Sinatra  application written by CrossRef in order to demonstrate how a publisher site should interact with the Text and Data API and Click-Through Service.
 
 
-For more information on how Prospect, see [http://prospect.crossref.org/](http://prospect.crossref.org/).
+For more information on how Text and Data Mining, see [https://apps.crossref.org/docs/tdm](https://apps.crossref.org/docs/tdm). For more information about the Click-Through Service see [https://apps.crossref.org/docs/clickthrough](https://apps.crossref.org/docs/clickthrough)
 
 Version 1.0 of the application was released in July 2013 and has been updated to be compatible with Ruby 1.9.3, Sinatra 1.4.2. It uses sqlite3 as the database backend.
 
